@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
   const cart = useSelector((state) => state.cart.products)
 
   return (
-    <Card style={{ height: "100%" }}>
+    <Card style={{ height: "100%" }} className='p-3'>
       <Card.Img variant='top' src={product.image} height={300} />
       <Card.Body>
         <Card.Title>{product.title.trim().substring(0, 25)}</Card.Title>
