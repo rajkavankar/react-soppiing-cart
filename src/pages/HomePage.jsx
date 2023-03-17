@@ -18,8 +18,8 @@ const HomePage = () => {
       <h1 className='text-center'>Store Page</h1>
       <Row>
         {products.map((product) => (
-          <Col className='mb-4' key={product.id} lg={3}>
-            <ProductCard product={product} />
+          <Col className='mb-4' lg={3} md={3}>
+            <ProductCard key={product.id} product={product} />
           </Col>
         ))}
       </Row>

@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
   const cart = useSelector((state) => state.cart.products)
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ height: "100%" }}>
       <Card.Img variant='top' src={product.image} height={300} />
       <Card.Body>
         <Card.Title>{product.title.trim().substring(0, 25)}</Card.Title>
@@ -16,6 +16,7 @@ const ProductCard = ({ product }) => {
         <Card.Text>{product.description?.trim().substring(0, 50)}.</Card.Text>
         {cart?.some((p) => p.id === product.id) ? (
           <Button
+            className='mt-auto'
             variant='danger'
             onClick={() => dispatch(removeProduct(product.id))}>
             Remove
