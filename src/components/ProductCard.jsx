@@ -16,13 +16,14 @@ const ProductCard = ({ product }) => {
         <Card.Text>{product.description?.trim().substring(0, 50)}.</Card.Text>
         {cart?.some((p) => p.id === product.id) ? (
           <Button
-            className='mt-auto'
+            className='mb-auto'
             variant='danger'
             onClick={() => dispatch(removeProduct(product.id))}>
             Remove
           </Button>
         ) : (
           <Button
+            className='mb-auto'
             variant='primary'
             onClick={() => dispatch(addProduct(product))}>
             Add to cart
