@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
   return (
     <Card style={{ height: "100%" }} className='p-3'>
       <Card.Img variant='top' src={product.image} height={300} />
-      <Card.Body>
+      <Card.Body className='d-flex flex-column justify-content-between gap-2'>
         <Card.Title>{product.title.trim().substring(0, 25)}</Card.Title>
         <Card.Title>${product.price}</Card.Title>
         <Card.Text>{product.description?.trim().substring(0, 50)}.</Card.Text>
